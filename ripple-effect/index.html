@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Ripple Effect</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ripple Effect | Gamified Social Impact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;500;700&family=Palanquin+Dark:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav">
+        <a href="#" class="logo">Ripple Effect</a>
+        <div class="nav-links">
+            <div class="points-display" id="pointsDisplay">0 Ripple Points</div>
+            <a href="#playing-the-game" class="nav-link">Playing the Game</a>
+            <a href="#achievement-badges" class="nav-link">Achievement Badges</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="main-title">Transform Kindness<br>Into a Game</h1>
+            
+            <!-- Process section with leaderboard -->
+            <div class="process-container">
+                <div class="process-grid">
+                    <div class="process-card">
+                        <div class="card-number">1</div>
+                        <h3 class="card-title">Daily Deeds</h3>
+                        <p>Receive randomized kindness missions</p>
+                    </div>
+
+                    <div class="process-card">
+                        <div class="card-number">2</div>
+                        <h3 class="card-title">Earn &amp; Level Up</h3>
+                        <p>Unlock badges from "Wave Starter" to "World Changer"</p>
+                    </div>
+
+                    <div class="process-card">
+                        <div class="card-number">3</div>
+                        <h3 class="card-title">Redeem Rewards</h3>
+                        <p>Exchange points for trophies and badges</p>
+                    </div>
+
+                    <div class="process-card">
+                        <div class="card-number">4</div>
+                        <h3 class="card-title">Global Impact</h3>
+                        <p>Watch the effects of your kindness make waves</p>
+                    </div>
+                </div>
+
+                <!-- Leaderboard section -->
+                <div class="leaderboard">
+                    <div class="leaderboard-header">
+                        <h3 class="leaderboard-title">Leaderboard</h3>
+                        <div class="leaderboard-divider"></div>
+                    </div>
+                    <div class="leaderboard-list" id="leaderboardList">
+                        <div class="leaderboard-item current-user">
+                            <i class="fas fa-crown medal"></i>
+                            <span class="leaderboard-rank">1</span>
+                            <span class="leaderboard-name">You</span>
+                            <span class="leaderboard-points" id="userPoints">0 points</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-divider"></div>
+            <h2 class="gameplay-heading" id="playing-the-game">Playing The Game</h2>
+
+            <div class="daily-challenge-card">
+                <div class="challenge-header">
+                    <h3 class="challenge-title">Daily Challenge</h3>
+                    <div class="challenge-timer" id="timer"></div>
+                </div>
+                
+                <div id="currentChallenge">Click below to unlock your personalized kindness mission</div>
+                
+                <div class="challenge-controls">
+                    <button class="challenge-button" id="generateChallengeBtn">
+                        <i class="fas fa-dice"></i> Generate Challenge
+                    </button>
+                    <button class="challenge-button" id="completeChallengeBtn">
+                        <i class="fas fa-check-circle"></i> Confirm Completion
+                    </button>
+                </div>
+            </div>
+
+            <div class="badge-section">
+                <h2 class="gameplay-heading" id="achievement-badges">Achievement Badges</h2>
+                <div class="badge-container">
+                    <!-- First row with three badges -->
+                    <div class="badge-row badge-row-1">
+                        <div class="badge-card locked" data-required="30">
+                            <div class="locked-badge"><i class="fas fa-lock"></i></div>
+                            <div class="badge-icon"><i class="fas fa-seedling"></i></div>
+                            <h3 class="badge-title">Ripple Starter</h3>
+                            <p class="badge-requirement">30 Points Required</p>
+                            <div class="badge-progress">
+                                <div class="badge-progress-fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+
+                        <div class="badge-card locked" data-required="50">
+                            <div class="locked-badge"><i class="fas fa-lock"></i></div>
+                            <div class="badge-icon"><i class="fas fa-water"></i></div>
+                            <h3 class="badge-title">Wave Maker</h3>
+                            <p class="badge-requirement">50 Points Required</p>
+                            <div class="badge-progress">
+                                <div class="badge-progress-fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+
+                        <div class="badge-card locked" data-required="100">
+                            <div class="locked-badge"><i class="fas fa-lock"></i></div>
+                            <div class="badge-icon"><i class="fas fa-recycle"></i></div>
+                            <h3 class="badge-title">Tide Turner</h3>
+                            <p class="badge-requirement">100 Points Required</p>
+                            <div class="badge-progress">
+                                <div class="badge-progress-fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Second row with two badges -->
+                    <div class="badge-row badge-row-2">
+                        <div class="badge-card locked" data-required="500">
+                            <div class="locked-badge"><i class="fas fa-lock"></i></div>
+                            <div class="badge-icon"><i class="fas fa-bolt"></i></div>
+                            <h3 class="badge-title">Change Catalyst</h3>
+                            <p class="badge-requirement">500 Points Required</p>
+                            <div class="badge-progress">
+                                <div class="badge-progress-fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+
+                        <div class="badge-card locked" data-required="1000">
+                            <div class="locked-badge"><i class="fas fa-lock"></i></div>
+                            <div class="badge-icon"><i class="fas fa-globe-americas"></i></div>
+                            <h3 class="badge-title">World Changer</h3>
+                            <p class="badge-requirement">1000 Points Required</p>
+                            <div class="badge-progress">
+                                <div class="badge-progress-fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="impact-section">
+        <div class="polka-dot-overlay"></div>
+        <div class="impact-content">
+            <div class="impact-quote">
+                "One act of kindness can inspire a chain reaction.<br>
+                <span class="highlight-quote">Play the game. Change the world.</span>"
+            </div>
+            
+            <div class="user-stats">
+                <div class="stat-item">
+                    <div class="stat-value" id="challengesCompleted">0</div>
+                    <div class="stat-label">Challenges Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="currentStreak">0</div>
+                    <div class="stat-label">Current Streak</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="badgesUnlocked">0</div>
+                    <div class="stat-label">Badges Unlocked</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
